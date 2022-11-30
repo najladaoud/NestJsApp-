@@ -1,0 +1,50 @@
+h3 {
+  margin-left: 25px;
+  text-align: center;
+}
+
+h3 a {
+  margin-left: 10px;
+}
+
+.power {
+  margin-top: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info h1 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.info p {
+  text-align: center;
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: #e0234e;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(29, 30, 32);
+    color: white;
+  }
+}
