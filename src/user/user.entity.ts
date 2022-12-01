@@ -1,13 +1,29 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity()
 export class User{
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn("uuid")
     id:number;
     @Column()
-    username:string;
-    @Column() 
-    password:string
+    fullname: string;
+ 
+    @Column({unique:true})
+    email: string;
+ 
+    @Column()
+    password: string
+ 
+    @Column({ select: false, nullable: true })
+    authConfirmToken: string
+
+    @Column({ default: false, nullable: true })
+    isVerified: Boolean;
+    
+    @Column({ select: false, nullable: true })
+    tokenValidation: string
+   
+    @CreateDateColumn()
+    createdAt: Date;   
      
 }
